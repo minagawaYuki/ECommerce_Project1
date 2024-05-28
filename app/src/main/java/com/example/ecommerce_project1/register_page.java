@@ -62,6 +62,7 @@ public class register_page extends AppCompatActivity {
                     Toast.makeText(register_page.this, "Password length too short", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 username    = eusername.getText().toString();
                 email = eemail.getText().toString();
                 password = epassword.getText().toString();
@@ -72,8 +73,6 @@ public class register_page extends AppCompatActivity {
                 epassword.setText("");
             }
         });
-
-
 
 
         linkSignin = (TextView) findViewById(R.id.txtSignin);

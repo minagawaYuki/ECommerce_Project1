@@ -71,8 +71,6 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(EMAIL, email);
         values.put(PASSWORD, password);
 
-
-
         // after adding all values we are passing
         // content values to our table.
         db.insert(TABLE_NAME, null, values);
