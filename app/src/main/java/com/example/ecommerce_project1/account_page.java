@@ -20,9 +20,9 @@ public class account_page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_account_page);
 
-        Intent intent = getIntent();
         username = findViewById(R.id.username);
-        String user_name = intent.getStringExtra("user_name");
+        // Pra mo gawas username
+        String user_name = getIntent().getStringExtra("user_name");
         username.setText(user_name);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btnCart), (v, insets) -> {

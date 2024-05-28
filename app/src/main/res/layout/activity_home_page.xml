@@ -1,273 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/homePageLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="center"
-    android:orientation="vertical"
+    android:background="#F7F7F7"
     tools:context=".home_page">
 
+    <!-- Header with Profile Picture and Greeting -->
     <LinearLayout
+        android:id="@+id/header_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Mark"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/header_layout"
+        android:layout_margin="16dp"
+        android:background="@drawable/profile"
+        android:hint="Search..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:drawablePadding="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/search_bar"
+        android:layout_margin="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/samplepic"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Mark x Felicity"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:text="Shop Now"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/shop_by_category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:text="Shop By Category"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_by_category_text"
+        android:layout_marginTop="57dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            >
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/searchEditText"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:padding="10dp"
-                android:inputType="text"
-                android:text=""
-                android:ems="10"
-                android:hint="Search..."
-                android:layout_marginRight="20dp"
-                android:drawableLeft="@drawable/search_icon_2"
-                android:drawablePadding="15dp"
-                android:background="@drawable/rounded_edittext"/>
-
-            <ImageButton
-                android:id="@+id/filterButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/filter_icon"
-                android:background="@drawable/chosen_borders"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/cat1"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/chosen_borders"
-                android:text="Category 1"
-                android:textColor="@color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/cat2"
-                android:layout_margin="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                app:backgroundTint="@null"
-                android:textColor="@color/black"
-                android:background="@drawable/borders"
-                android:text="Category 2" />
-            <Button
-                android:id="@+id/cat3"
-                android:layout_margin="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                app:backgroundTint="@null"
-                android:textColor="@color/black"
-                android:background="@drawable/borders"
-                android:text="Category 3" />
-
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="500dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="600dp"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="205dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/samplepic" />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:id="@+id/sampleImage1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/samplepic" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/sampleText1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 1" />
-
-                    <TextView
-                        android:id="@+id/sampleText2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 2" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:id="@+id/sampleImage2"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/samplepic" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/sampleText3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="50dp"
-                        android:text="Sample Text 3" />
-
-                    <TextView
-                        android:id="@+id/sampleText4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 4" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="205dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:id="@+id/sampleImage3"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/samplepic" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/sampleText5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 5" />
-
-                    <TextView
-                        android:id="@+id/sampleText6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 6" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:id="@+id/sampleImage4"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/samplepic" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/sampleText7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Sample Text 7" />
-
-                    <TextView
-                        android:id="@+id/sampleText8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="50dp"
-                        android:text="Sample Text 8" />
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mark x Felicity"
+                    android:textColor="#000" />
             </LinearLayout>
 
-        </ScrollView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/samplepic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mark x Felicity"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/samplepic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mark x Felicity"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/recommended_for_you_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_by_category_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:text="Recommended For You"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommended_for_you_text"
+        android:layout_marginTop="114dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+<!--            E butang nya ni if nahan mo background-->
+<!--            android:background="@drawable/product_background"-->
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/samplepic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mark x Felicity"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="$27.00"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <!--            E butang nya ni if nahan mo background-->
+            <!--            android:background="@drawable/product_background"-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/samplepic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mark x Felicity"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="$27.00"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <!--            E butang nya ni if nahan mo background-->
+            <!--            android:background="@drawable/product_background"-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/samplepic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Mark x Felicity"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="$27.00"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:gravity="center">
 
-        android:background="@drawable/icon_border"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/buttonIcon1"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="150dp"
-            android:background="@color/white"
+            android:layout_weight="1"
             android:src="@drawable/home_icon" />
 
-        <ImageButton
-            android:id="@+id/btnCart"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:background="@color/white"
+            android:layout_weight="1"
             android:src="@drawable/cart_icon" />
 
-        <ImageButton
-            android:id="@+id/buttonIcon3"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:background="@color/white"
-            android:src="@drawable/notification_icon" />
-
-        <ImageButton
-            android:id="@+id/btnUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:background="@color/white"
-            android:onClick="onClickUserIcon"
+            android:layout_weight="1"
             android:src="@drawable/user_icon" />
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/notification_icon" />
     </LinearLayout>
+
 </RelativeLayout>
