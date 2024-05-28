@@ -7,7 +7,6 @@
     android:background="#F7F7F7"
     tools:context=".home_page">
 
-    <!-- Header with Profile Picture and Greeting -->
     <LinearLayout
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
