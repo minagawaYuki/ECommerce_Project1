@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header Section -->
             <LinearLayout
                 android:id="@+id/header_layout"
                 android:layout_width="match_parent"
@@ -48,7 +47,6 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-            <!-- Search Bar -->
             <EditText
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
@@ -60,7 +58,6 @@
                 android:drawablePadding="10dp" />
             <!--                android:background="@drawable/search_background"-->
 
-            <!-- Banner Section -->
             <RelativeLayout
                 android:id="@+id/banner_layout"
                 android:layout_width="match_parent"
@@ -89,7 +86,6 @@
                     android:textColor="#FFFFFF" />
             </RelativeLayout>
 
-            <!-- Shop By Category Section -->
             <TextView
                 android:id="@+id/shop_by_category_text"
                 android:layout_width="wrap_content"
@@ -175,7 +171,6 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Recommended For You Section -->
             <TextView
                 android:id="@+id/recommended_for_you_text"
                 android:layout_width="wrap_content"
@@ -194,7 +189,6 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp">
 
-                <!-- Recommended Items -->
                 <LinearLayout
                     android:id="@+id/itemsSection1"
                     android:layout_width="match_parent"
@@ -282,7 +276,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Mark                            x Felicity"
+                            android:text="Mark x Felicity"
                             android:textColor="#000"
                             android:textSize="16sp" />
 
