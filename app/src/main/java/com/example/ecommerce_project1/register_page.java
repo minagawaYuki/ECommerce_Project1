@@ -67,6 +67,10 @@ public class register_page extends AppCompatActivity {
                 intent.putExtra("user_name", username);
                 startActivity(intent);
 
+                Intent intent1 = new Intent(register_page.this, home_page.class);
+                intent1.putExtra("user_name", username);
+                startActivity(intent1);
+
                 eusername.setText("");
                 eemail.setText("");
                 epassword.setText("");

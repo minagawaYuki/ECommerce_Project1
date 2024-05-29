@@ -25,7 +25,7 @@ public class account_page extends AppCompatActivity {
         String user_name = getIntent().getStringExtra("user_name");
         username.setText(user_name);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btnCart), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
