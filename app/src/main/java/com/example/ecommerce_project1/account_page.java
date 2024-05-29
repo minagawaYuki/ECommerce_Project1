@@ -20,10 +20,11 @@ public class account_page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_account_page);
 
-        username = findViewById(R.id.username);
-        // Pra mo gawas username
-        String user_name = getIntent().getStringExtra("user_name");
-        username.setText(user_name);
+        Intent intent = getIntent();
+
+        username = findViewById(R.id.acc_username);
+        String userName = intent.getStringExtra("user_name_home");
+        username.setText(userName);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

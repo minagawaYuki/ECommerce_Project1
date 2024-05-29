@@ -62,14 +62,10 @@ public class register_page extends AppCompatActivity {
                 dbHandler.addNewUser(username, email, password);
                 Toast.makeText(register_page.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-                // Pras account_page rani. Mark x Felicity
-                Intent intent = new Intent(register_page.this, account_page.class);
-                intent.putExtra("user_name", username);
-                startActivity(intent);
 
-                Intent intent1 = new Intent(register_page.this, home_page.class);
-                intent1.putExtra("user_name", username);
-                startActivity(intent1);
+
+
+
 
                 eusername.setText("");
                 eemail.setText("");
@@ -82,6 +78,16 @@ public class register_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(register_page.this, MainActivity.class);
+                String userName = eusername.getText().toString();
+
+                Intent intent2 = new Intent(register_page.this, home_page.class);
+                intent2.putExtra("user_name_home", userName);
+
+                Intent intent = new Intent(register_page.this, account_page.class);
+                intent.putExtra("user_name_home", userName);
+                startActivity(intent);
+
+                startActivity(intent2);
                 startActivity(intent1);
             }
         });

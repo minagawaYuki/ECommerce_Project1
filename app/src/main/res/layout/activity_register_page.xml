@@ -111,6 +111,7 @@
                     android:textAlignment="center"
                     android:textSize="19sp"
                     android:textStyle="bold"
+                    android:textColor="@color/white"
                     app:backgroundTint="@null" />
             </LinearLayout>
         </LinearLayout>
